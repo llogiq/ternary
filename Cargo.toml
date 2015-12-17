@@ -1,0 +1,12 @@
+[package]
+name = "ternary"
+version = "0.1.0"
+authors = ["Andre Bogus <bogusandre@gmail.com>"]
+readme = "README.md"
+keywords = ["ternary", "types"]
+license = "MIT"
+repository = "https://github.com/llogiq/ternary"
+
+[lib]
+name = "ternary"
+path = "src/lib.rs"
