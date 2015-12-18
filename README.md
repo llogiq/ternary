@@ -1,5 +1,9 @@
 # Kleene logic within Rust's type system
 
+[![Build Status](https://travis-ci.org/llogiq/optional.svg)](https://travis-ci.org/llogiq/ternary)
+[![Current Version](http://meritbadge.herokuapp.com/optional)](https://crates.io/crates/ternary)
+[![License: MIT](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
+
 Values are `True`, `False` and `Unknown`. Operations are `Not`, `BitAnd`
 and `BitOr` from `std::ops`. There is also the `Ternary` enum which 
 represents the values at runtime and the `ToTernary` trait that adds the
