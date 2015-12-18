@@ -11,3 +11,6 @@ repository = "https://github.com/llogiq/ternary"
 [lib]
 name = "ternary"
 path = "src/lib.rs"
+
+[features]
+unstable = []
