@@ -9,6 +9,8 @@ and `BitOr` from `std::ops`. There is also the `Ternary` enum which
 represents the values at runtime and the `ToTernary` trait that adds the
 `to_ternary()` methods to our value types.
 
+For more information read the [API documentation](http://llogiq.github.io/ternary)
+
 Examples:
 
 `Same` and `Not`
