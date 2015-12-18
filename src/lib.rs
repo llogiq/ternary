@@ -36,8 +36,15 @@ pub enum False {}
 pub enum Unknown {}
 
 /// runtime representation
-#[derive(Copy, Clone, PartialEq, Eq, Debug)]
-pub enum Ternary { T, F, U }
+#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
+pub enum Ternary { 
+    /// A True-ish value
+    T,
+    /// An Unknown value
+    U,
+    /// A False-ish value
+    F,
+}
 
 /// conversion to runtime enum
 ///

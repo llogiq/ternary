@@ -20,7 +20,8 @@ type NotUnknown = <<Unknown as Not>::Output as Same<Unknown>>::Output;
 Transforming Values to Runtime, `BitAnd` and `BitOr`
 
 ```
-assert_eq!(Ternary::T, <True as BitOr<<Unknown as BitAnd<False>>::Output>>::Output::to_ternary());
+assert_eq!(Ternary::T, <True as BitOr<<Unknown as 
+    BitAnd<False>>::Output>>::Output::to_ternary());
 ```
 
 To use it, add `ternary = "0.1.0"` to your dependencies.
