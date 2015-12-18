@@ -1,7 +1,7 @@
 [package]
 name = "ternary"
 description = "Kleene Logic within Rust's type system"
-version = "0.1.0"
+version = "0.1.2"
 authors = ["Andre Bogus <bogusandre@gmail.com>"]
 readme = "README.md"
 keywords = ["ternary", "types"]
