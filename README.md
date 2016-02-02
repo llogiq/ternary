@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/llogiq/ternary.svg)](https://travis-ci.org/llogiq/ternary)
 [![Current Version](http://meritbadge.herokuapp.com/ternary)](https://crates.io/crates/ternary)
-[![License: MIT](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
+[![License: MIT/Apache](https://img.shields.io/crates/l/ternary.svg)](LICENSE)
 
 Values are `True`, `False` and `Unknown`. Operations are `Not`, `BitAnd`
 and `BitOr` from `std::ops`. There is also the `Ternary` enum which 
