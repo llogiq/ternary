@@ -24,6 +24,9 @@
 //!# use std::ops::{BitAnd, BitOr};
 //! assert_eq!(Ternary::T, <True as BitOr<<Unknown as BitAnd<False>>::Output>>::Output::to_ternary());
 //! ```
+
+#[deny(missing_docs)]
+
 use std::ops::{Not, BitAnd, BitOr};
 
 /// Our True type value
@@ -76,19 +79,19 @@ impl ToTernary for Unknown {
 /// !True == False
 impl Not for True {
     type Output = False;
-    fn not(self) -> Self::Output { unreachable!() }
+    fn not(self) -> Self::Output { match self {} }
 }
 
 ///!False == True
 impl Not for False {
     type Output = True;
-    fn not(self) -> Self::Output { unreachable!() }
+    fn not(self) -> Self::Output { match self {} }
 }
 
 ///!Unknown == Unknown
 impl Not for Unknown {
     type Output = Unknown;
-    fn not(self) -> Self::Output { unreachable!() }
+    fn not(self) -> Self::Output { match self {} }
 }
 
 /// BitAnd
@@ -96,31 +99,31 @@ impl Not for Unknown {
 /// True & X == X
 impl<X: ToTernary> BitAnd<X> for True {
     type Output = X;
-    fn bitand(self, _: X) -> Self::Output { unreachable!() }
+    fn bitand(self, _: X) -> Self::Output { match self {} }
 }
 
 /// False & X == False
 impl<X: ToTernary> BitAnd<X> for False {
     type Output = False;
-    fn bitand(self, _: X) -> Self::Output { unreachable!() }
+    fn bitand(self, _: X) -> Self::Output { match self {} }
 }
 
 /// Unknown & True == Unknown
 impl BitAnd<True> for Unknown {
     type Output = Unknown;
-    fn bitand(self, _: True) -> Self::Output { unreachable!() }
+    fn bitand(self, _: True) -> Self::Output { match self {} }
 }
 
 /// Unknown & Unknown == Unknown
 impl BitAnd<Unknown> for Unknown {
     type Output = Unknown;
-    fn bitand(self, _: Unknown) -> Self::Output { unreachable!() }
+    fn bitand(self, _: Unknown) -> Self::Output { match self {} }
 }
 
 /// Unknown & False == False
 impl BitAnd<False> for Unknown {
     type Output = False;
-    fn bitand(self, _: False) -> Self::Output { unreachable!() }
+    fn bitand(self, _: False) -> Self::Output { match self {} }
 }
 
 
@@ -129,31 +132,31 @@ impl BitAnd<False> for Unknown {
 /// True | X == True
 impl<X: ToTernary> BitOr<X> for True {
     type Output = True;
-    fn bitor(self, _: X) -> Self::Output { unreachable!() }
+    fn bitor(self, _: X) -> Self::Output { match self {} }
 }
 
 /// False | X == X
 impl<X: ToTernary> BitOr<X> for False {
     type Output = X;
-    fn bitor(self, _: X) -> Self::Output { unreachable!() }
+    fn bitor(self, _: X) -> Self::Output { match self {} }
 }
 
 /// Unknown | True == True
 impl BitOr<True> for Unknown {
     type Output = True;
-    fn bitor(self, _: True) -> Self::Output { unreachable!() }
+    fn bitor(self, _: True) -> Self::Output { match self {} }
 }
 
 /// Unknown | Unknown == Unknown
 impl BitOr<Unknown> for Unknown {
     type Output = Unknown;
-    fn bitor(self, _: Unknown) -> Self::Output { unreachable!() }
+    fn bitor(self, _: Unknown) -> Self::Output { match self {} }
 }
 
 /// Unknown | False == Unknown
 impl BitOr<False> for Unknown {
     type Output = Unknown;
-    fn bitor(self, _: False) -> Self::Output { unreachable!() }
+    fn bitor(self, _: False) -> Self::Output { match self {} }
 }
 
 /// shamelessly copied from typenum
