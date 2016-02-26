@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/llogiq/ternary.svg)](https://travis-ci.org/llogiq/ternary)
 [![Current Version](http://meritbadge.herokuapp.com/ternary)](https://crates.io/crates/ternary)
+[![Coverage Status](https://coveralls.io/repos/github/llogiq/ternary/badge.svg?branch=master)](https://coveralls.io/github/llogiq/ternary?branch=master)
 [![License: MIT/Apache](https://img.shields.io/crates/l/ternary.svg)](LICENSE)
 
 Values are `True`, `False` and `Unknown`. Operations are `Not`, `BitAnd`
