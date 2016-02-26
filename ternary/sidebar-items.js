@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["False","Our False type value"],["Ternary","runtime representation"],["True","Our True type value"],["Unknown","Our Unknown type value"]],"trait":[["Same","shamelessly copied from typenum"],["ToTernary","conversion to runtime enum"]]});
